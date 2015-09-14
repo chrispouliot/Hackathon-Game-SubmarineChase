@@ -21,8 +21,8 @@ public class Patrol : MonoBehaviour {
 			currentPoint = nextPos;
 		}
 
-		int shouldFire = Random.Range (0, 100);
-		if (shouldFire % 4 == 0) {
+		int shouldFire = Random.Range (0, 1000);
+		if (shouldFire % 223 == 0) {
 			Instantiate(laser, transform.position, Quaternion.identity);
 			Vector3 playerPosition = GameObject.Find("Player").transform.position;
 			laser.transform.LookAt(playerPosition);
